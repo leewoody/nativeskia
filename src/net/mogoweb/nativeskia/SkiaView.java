@@ -19,6 +19,7 @@ public class SkiaView extends View
 
     public native void renderHello(Canvas canvas);
     public native void renderText(Canvas canvas);
+    public native void renderImage(Canvas canvas);
 
     public SkiaView(Context context)
     {
@@ -47,6 +48,10 @@ public class SkiaView extends View
         case 1:
             Log.d(TAG, "render text");
             renderText(canvas);
+            break;
+        case 2:
+            Log.d(TAG, "render image");
+            renderImage(canvas);
             break;
         default:
             break;

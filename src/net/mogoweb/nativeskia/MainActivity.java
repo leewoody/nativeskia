@@ -13,8 +13,8 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 public class MainActivity extends ListActivity {
-    private String[] mSamplesTitle = {"Hello Skia", "Draw Text"};
-    private int[] mSamplesId = {0, 1};
+    private String[] mSamplesTitle = {"Hello Skia", "Draw Text", "Draw Image"};
+    private int[] mSamplesId = {0, 1, 2};
     
     /** Called when the activity is first created. */
     @Override

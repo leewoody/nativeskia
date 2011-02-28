@@ -5,7 +5,7 @@
 #include "SkPaint.h"
 #include "SkCanvas.h"
 
-void Java_com_whtr_example_skiademo_SkiaView_renderHello(JNIEnv *env, jobject thizz, jobject canvas)
+void Java_net_mogoweb_nativeskia_SkiaView_renderHello(JNIEnv *env, jobject thizz, jobject canvas)
 {
 	SkCanvas* canv = GraphicsJNI::getNativeCanvas(env, canvas);
 	if (!canv)
@@ -20,7 +20,7 @@ void Java_com_whtr_example_skiademo_SkiaView_renderHello(JNIEnv *env, jobject th
 
 }
 
-void Java_com_whtr_example_skiademo_SkiaView_renderText(JNIEnv *env, jobject thizz, jobject canvas)
+void Java_net_mogoweb_nativeskia_SkiaView_renderText(JNIEnv *env, jobject thizz, jobject canvas)
 {
 	SkCanvas* canv = GraphicsJNI::getNativeCanvas(env, canvas);
 	if (!canv)
@@ -43,4 +43,14 @@ void Java_com_whtr_example_skiademo_SkiaView_renderText(JNIEnv *env, jobject thi
 	paint.setSubpixelText(true);
 	canv->drawText(text, strlen(text), 20, 100, paint);
 
+}
+
+void Java_net_mogoweb_nativeskia_SkiaView_renderImage(JNIEnv *env, jobject thizz, jobject canvas)
+{
+	SkCanvas* canv = GraphicsJNI::getNativeCanvas(env, canvas);
+	if (!canv)
+	{
+		LOGE("!canv");
+		return ;
+	}
 }
